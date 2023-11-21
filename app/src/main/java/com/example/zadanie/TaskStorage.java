@@ -13,6 +13,13 @@ public class TaskStorage {
         tasks = new ArrayList<Task>(tasksCount);
         for (int i = 1; i <= tasksCount; ++i) {
             Task task = new Task();
+            if(i%3==0)
+            {
+                task.setCategory(Category.STUDIES);
+            }
+            else {
+                task.setCategory(Category.HOME);
+            }
             task.setName("Zadanie #" + i);
             task.setDone(i % 3 == 0);
             tasks.add(task);

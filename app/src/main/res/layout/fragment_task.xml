@@ -14,22 +14,37 @@
         android:id="@+id/task_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/task_name_hint" />
+        android:hint="@string/task_name_hint"/>
+
 
     <TextView
-        style="?android:listSeparatorTextViewStyle"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/task_details_label" />
+        android:text="@string/task_details_label"
+        style="@style/Weird"/>
 
-    <Button
+    <EditText
         android:id="@+id/task_date"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:autofillHints=""
+        android:inputType="date"
+        />
 
     <CheckBox
         android:id="@+id/task_done"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/task_done_label" />
+
+    <Spinner
+        android:id="@+id/task_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>
